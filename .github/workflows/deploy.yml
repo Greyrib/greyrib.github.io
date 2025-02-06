@@ -3,7 +3,7 @@ name: Deploy Blazor WebAssembly to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change to the branch you use for development if it's not `main`
+      - main  # Or the branch you use for development
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
 
-      # Step 4: Publish Blazor WebAssembly app to a folder
+      # Step 4: Build and Publish Blazor WebAssembly
       - name: Build and Publish Blazor WebAssembly
         run: dotnet publish -c Release -o ./publish
 
@@ -32,5 +32,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically provides this token
-          publish_dir: ./publish/wwwroot  # The folder containing the built Blazor app
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./publish/wwwroot  # Deploy contents of the wwwroot folder
