@@ -1,8 +1,9 @@
 name: Update Razor Page Date
 
 on:
-  schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  push:  # Runs on every push to any branch
+    branches:
+      - gh_pages # Change if using a different branch
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
@@ -14,8 +15,8 @@ jobs:
 
       - name: Update Date in Razor Page
         run: |
-          NOW=$(date +"%Y-%m-%d %H:%M:%S")
-          sed -i 's/@CurrentDate.*/@CurrentDate = "'"$NOW"'";/' Layout/NavMenu.razor
+          TODAY=$(date +"%Y-%m-%d")
+          sed -i 's/@UpdateDate.*/@UpdateDate = "'"$TODAY"'";/' Layout/NavMenu.razor
 
       - name: Commit & Push Changes
         run: |
