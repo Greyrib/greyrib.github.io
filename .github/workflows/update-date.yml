@@ -15,7 +15,7 @@ jobs:
 
       - name: Update Date in Razor Page
         run: |
-	  TODAY=$(date +"%Y-%m-%d %H:%M:%S")  # Include time
+          TODAY=$(date +"%Y-%m-%d %H:%M:%S")  # Include time
           sed -i 's/@UpdateDate.*/@UpdateDate = "'"$TODAY"'";/' Layout/NavMenu.razor
 
       - name: Commit & Push Changes
