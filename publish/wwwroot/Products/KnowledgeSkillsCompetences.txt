@@ -1,0 +1,50 @@
+------------>>> GPT-based dialogue
+
+Here’s a brief differentiation of knowledge, skills, and competences in the context of learning:
+
+    Knowledge: What you know—facts, concepts, theories, and principles learned through education or experience. (E.g., knowing the rules of grammar in a language.)
+    Skills: What you can do—the ability to apply knowledge in a practical way, often requiring practice. (E.g., writing a well-structured essay.)
+    Competences: What you are capable of—a combination of knowledge, skills, and attitudes that enable effective performance in a real-world context. (E.g., communicating effectively in a professional setting.)
+
+Competences are broader because they involve applying knowledge and skills in different situations.
+
+---
+
+Here’s how knowledge, skills, and competences relate to Computer Science:
+
+    Knowledge: Understanding concepts, theories, and principles.
+    E.g., Knowing data structures (arrays, linked lists, trees) and algorithms (sorting, searching, etc.).
+
+    Skills: The ability to apply knowledge in practical tasks.
+    E.g., Writing efficient code in Python, debugging programs, or implementing a sorting algorithm.
+
+    Competences: The ability to solve real-world problems using knowledge and skills in various contexts.
+    E.g., Designing scalable software architectures, optimizing database queries for performance, or leading a development team in a project.
+
+---
+
+Here’s how knowledge, skills, and competences apply to Software Engineering:
+
+    Knowledge (What you know – theoretical understanding)
+        Software development methodologies (Agile, Waterfall, DevOps)
+        Object-oriented programming (OOP) principles
+        Design patterns (MVC, Singleton, Factory, etc.)
+        Databases and SQL fundamentals
+        Version control systems (Git, GitHub, GitLab)
+
+    Skills (What you can do – practical abilities)
+        Writing clean and maintainable code in languages like Python, Java, or JavaScript
+        Debugging and troubleshooting software issues
+        Implementing APIs and working with web frameworks
+        Using CI/CD pipelines for automated deployment
+        Writing unit and integration tests
+
+    Competences (What you are capable of – real-world application)
+        Leading a development team and managing software projects
+        Architecting scalable and secure software solutions
+        Balancing trade-offs between performance, maintainability, and cost
+        Adapting to new technologies and frameworks quickly
+        Collaborating across teams (developers, designers, business stakeholders)
+
+---
+
