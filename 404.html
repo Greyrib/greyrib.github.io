@@ -1,16 +1,21 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=/" />
     <script>
-        var path = window.location.pathname;
-        var search = window.location.search;
-        var hash = window.location.hash;
-        var newUrl = "/" + "?redirect=" + encodeURIComponent(path + search + hash);
-        window.location.replace(newUrl);
+        (function() {
+            var path = window.location.pathname;
+            var search = window.location.search;
+            var hash = window.location.hash;
+
+            // Redirect to index.html with the original path as a query parameter
+            var newUrl = "/" + "?redirect=" + encodeURIComponent(path + search + hash);
+            window.location.replace(newUrl);
+        })();
     </script>
 </head>
 <body>
     Redirecting...
 </body>
 </html>
+
+

@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Portfolio",
   "resources": {
-    "hash": "sha256-tNXzf48NYoR0emTXo5FkJPKFA/1wIZBJNPu9delhnXc=",
+    "hash": "sha256-evsDm6y39auIqWONYLoWeffIWFsvPMNIdLRTV+FaQo4=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-VdKq87/z5NIxZKmuM+fv38XF+RcEb/bg3jVBwQSfwP4="
     },
@@ -57,7 +57,7 @@
       "Microsoft.Net.Http.Headers.wasm": "sha256-jfXK+cfJd/PteHB+5Bay/NDY9b9VLvVw6G/Bm262Lpo=",
       "netstandard.wasm": "sha256-t5I9ZQAcTxkCd3rGrvpRMkKMnho2UDYRq1VHd4NyUGY=",
       "Newtonsoft.Json.wasm": "sha256-DBfpbduzEP2lTeFZddrFGuNDOcOwgBPZwFsTYJEFsSA=",
-      "Portfolio.wasm": "sha256-XQQ8QXpLq1kjdgZR3Gjs5zvdGj5dv6BH4r1FDeABbPM=",
+      "Portfolio.wasm": "sha256-uWB7CgQZczUP239AeT7Apqyss+Q3WSSBPxovm+rjcJ8=",
       "System.AppContext.wasm": "sha256-Z7IECI5yljdD7lXts3Z4O4JW6kKPXcoxxbp0Ff16waY=",
       "System.Buffers.wasm": "sha256-oKyqvv2/GRiC/hmNhfG0gvLOH9VEQL5Hn1y0uuWH1c4=",
       "System.Collections.Concurrent.wasm": "sha256-NGTepHiOYYGlAJJXHl+db9C9xDFQIUisxIDOa30aa6U=",

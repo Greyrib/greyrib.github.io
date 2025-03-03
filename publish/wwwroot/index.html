@@ -19,7 +19,17 @@
 
     <link href="css/Home.css" rel="stylesheet" />
 
-    
+    <script>
+        (function () {
+            var path = window.location.pathname;
+            var search = window.location.search;
+            var hash = window.location.hash;
+
+            // Redirect to index.html with the original path as a query parameter
+            var newUrl = "/" + "?redirect=" + encodeURIComponent(path + search + hash);
+            window.location.replace(newUrl);
+        })();
+    </script>
 </head>
 
 <!--Needs to be placed before <body>, to be usable within the 'under-pages'-->
@@ -44,5 +54,7 @@
 
     
 </body>
+
+
 
 </html>
