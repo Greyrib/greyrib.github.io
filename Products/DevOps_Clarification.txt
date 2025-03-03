@@ -1,0 +1,16 @@
+DevOps Clarification
+--------------------
+
+Vigtigt princip: Rapid reliable delivery (via automatisering)
+
+
+4 nögle-faser i DevOps:
+
+    Plan – Requirements, arkitektur & udviklingsstrategi; koordinering af teams, backlog management og CI/CD planlægning.
+
+    Develop – Skriv kode, review & test. CI-del: Auto-merged ved push up & automatiske tests
+
+    Release – CD-del: Automatisk building, deployment & "infrastructure provisioning" *.
+
+    Operate – Monitoring, sikkerhed & performance optimering. Logging, alerting & incident-response. Keyword: Reliability
+
