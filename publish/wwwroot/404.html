@@ -1,19 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-        (function() {
-            var path = window.location.pathname;
-            var search = window.location.search;
-            var hash = window.location.hash;
-
-            // Prevent an infinite redirect loop by checking if we're already on the redirect page
-            if (!search.includes("redirect=")) {
-                var newUrl = "/" + "?redirect=" + encodeURIComponent(path + search + hash);
-                window.location.replace(newUrl);
-            }
-        })();
-    </script>
+    <meta http-equiv="refresh" content="0; url=/" />
 </head>
 <body>
     Redirecting...
