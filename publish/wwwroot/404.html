@@ -7,9 +7,11 @@
             var search = window.location.search;
             var hash = window.location.hash;
 
-            // Redirect to index.html with the original path as a query parameter
-            var newUrl = "/" + "?redirect=" + encodeURIComponent(path + search + hash);
-            window.location.replace(newUrl);
+            // Prevent an infinite redirect loop by checking if we're already on the redirect page
+            if (!search.includes("redirect=")) {
+                var newUrl = "/" + "?redirect=" + encodeURIComponent(path + search + hash);
+                window.location.replace(newUrl);
+            }
         })();
     </script>
 </head>
@@ -17,5 +19,3 @@
     Redirecting...
 </body>
 </html>
-
-

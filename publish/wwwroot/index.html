@@ -21,13 +21,13 @@
 
     <script>
         (function () {
-            var path = window.location.pathname;
-            var search = window.location.search;
-            var hash = window.location.hash;
+            var params = new URLSearchParams(window.location.search);
+            var redirectPath = params.get("redirect");
 
-            // Redirect to index.html with the original path as a query parameter
-            var newUrl = "/" + "?redirect=" + encodeURIComponent(path + search + hash);
-            window.location.replace(newUrl);
+            if (redirectPath) {
+                // Replace the current URL in history without reloading
+                history.replaceState({}, "", redirectPath);
+            }
         })();
     </script>
 </head>
