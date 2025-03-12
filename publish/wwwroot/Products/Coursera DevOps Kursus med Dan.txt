@@ -1,0 +1,117 @@
+Coursera DevOps Kursus med Dan
+Noter:
+------------------------------
+
+> Folk er basen for teams'ne som udvikler projekter
+	> Dvs. de er ogs' foundation for at optimize processen
+
+> To implement DevOps, you have to make lots of changes
+
+> "Fail fast"
+
+
+> "people-related factors tend to be the greatest challenges - not technology" - George Spafford, Senior Director Analyst, Gartner
+
+---
+
+> Disruption - it's not a matter of if you get disrupted, but when
+
+> Pivoting if disrupted lets us survive (Garmin > from GPS to (fitness) tracking)
+
+---
+
+> Adopt DevOps first step: Unlearn what you have learned! (extremely difficult to do)
+
+> What if you could fail fast & roll back quickly ?
+- You can 'limit the blastradius of failing'
+
+> Spotify = microservices app (instead of one giant monolithic)
+	+ You can make small changes on individual services, without breaking whole app
+
+> Allspaw at Velocity 2009 - 10+ Deploys Per Day
+
+> Core principles: Trust, transparency, discipline & communication
+
+> MTTR - Mean Time To Recovry
+
+> Work faster, release faster
+
+> CSG - From 200 incidents per release to 18
+
+> DevOps is not about tools, but about discipline, coordination, trust, transparency & communication
+
+--- 'Definition of DevOps'
+
+> DevOps = Dev & Ops NOT siloed, but work TOGETHER (through entirely software lifecycle)
+
+> Automation for speed & stability deployments
+
+> Programmable platform ; "I need an environment, and I need it NOW"
+
+> DevOps is like 'Agile'; Agile is not a team elsewhere, rather the 'company becomes agile'
+
+--- 'Essential Characteristics of Devops'
+
+> What is the goal ? Agility
+
+> Move in market with maximum velocity & minimum risk
+
+> Gain quick, valuable insights
+
+> Microservices built to resist failure
+
+> Immutable infrastructure
+
+> Ephemeral containers because, if they break, we don't try to fix them, we start another
+
+> SOA ; Service-Oriented Applications
+
+> DevOps dimensions: Methods - Tools - Culture (Triangle)
+	* Most important: Culture (according to Atlassian)
+	* Tools & methods are important, but Culture has the biggest impact
+
+> Organization has a direct impact on how you build things (so you must change your organizing)
+
+> Essential Characteristics of DevOps:
+Cultural Change
+Automated Pipelines
+Infrastructure as Code
+Microservices
+Containers
+Immutable Infrastructure
+
+--- Leading Up To DevOps
+
+> Waterfall : Coding is isolated in each phase
+	+ Only in Integration do we encounter a point of actually seeing if it works/integrates
+	> The people to deploy know the least about the code
+
+--- XP, Agile & Beyond
+
+> Planning is adaptive
+> We can respond to changes
+> Agile Manifesto ; value on right, MORE value on left
+
+> IT synonymous with Ops (usage of terms)
+	- "Shadow IT"
+
+--- A Brief History of DevOps
+
+> Growth events in DevOps from 2007 to 2019
+	- 2007 Patrick Debois : Dev & Ops not working together
+	- 2008 Andrew Clay Shafer - "Agile Infrastructure" (start of DevOps)
+	- 2009 John Allspawn "10+ Deploys per Days"
+	- 2009 Patrick Debois - DevOpsDays conference in Belgium
+	- 2010 Continuous Delivery - Jez Humble & David Farley
+	- 2013 The Phoenix Project - Gene Kim, Kevin Behr & George Spafford
+	- 2015 State of DevOps Report (DevOps Research Assessment DORA) - Dr Nicole Forsgren, Gene Kim & Jez Humble
+	- 2016 The DevOps Handbook - Gene Kim, Jez Humble, Patrick Debois & John Willis [this is THE DevOps book to read] ***
+	- 2019 DevOpsDays - Patrick Debois old lead, Bridget Kromhout new lead to 2020
+
+	- Why important ? Because DevOps was grassroots, by Patrick Debois
+
+> DevOps is an experience-based movement, open to all
+
+--- Social Coding Principles
+
+> 

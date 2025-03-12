@@ -1,0 +1,64 @@
+DevOps Clarification
+--------------------
+
+Vigtigt princip: Rapid reliable delivery (via automatisering)
+
+
+* Ifölge Microsoft Azure's site *
+4 nögle-faser i DevOps:
+
+    Plan – Requirements, arkitektur & udviklingsstrategi; koordinering af teams, backlog management og CI/CD planlægning.
+
+    Develop – Skriv kode, review & test. CI-del: Auto-merged ved push up & automatiske tests
+
+    Release – CD-del: Automatisk building, deployment & "infrastructure provisioning" *.
+
+    Operate – Monitoring, sikkerhed & performance optimering. Logging, alerting & incident-response. Keyword: Reliability
+
+---
+
+Phase-Specific Software Parts:
+
+>>> Plan
+
+>>> Code
+- git (Version Control)
+
+>>> Build
+- gradle
+- Maven
+
+>>> Test
+- Selenium
+
+>>> Deploy
+
+
+>>> Operate
+- Docker
+- Kubernetes ; orchestration tool
+- Ansible
+
+>>> Monitor
+- Nagios
+
+>>> Integrate
+- Jenkins
+
+Orchestration Platform concerns:
+	- Deploy
+	- Scaling ; manage scaling to ensure ideal compute resource usage
+	- Network ; communication between multiple service-parts (e.g. 2 front end, 3 back end, 1 database)
+	- Insight ; service mesh* overview
+
+Service Mesh
+- 2 komponenter:
+	- data plane
+		- Lightweight sidecar proxies (e.g. Envoy), manage network traffic mellem microservices
+	- control plane
+		- Konfigurering, policies & telemetry indsamling
+- Why use ?
+	- Håndtérer (micro)service discovery & routing
+	- 'Observability' (tracing, monitoring, logging)
+	- Authentication, authorization
+	- Resiliency (auto-retries, circuit breaking, failover)
