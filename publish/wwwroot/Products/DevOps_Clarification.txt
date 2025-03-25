@@ -62,9 +62,3 @@ Service Mesh
 	- 'Observability' (tracing, monitoring, logging)
 	- Authentication, authorization
 	- Resiliency (auto-retries, circuit breaking, failover)
-
-SOA
-	- Service-Oriented Architecture
-	- Loosely-coupled reusable services
-	- SOAP, REST
-	- Scaleable, flexible & interoperability

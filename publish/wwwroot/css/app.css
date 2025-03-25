@@ -101,14 +101,3 @@ a, .btn-link {
 code {
     color: #c02d76;
 }
-
-
-/*CUSTOM CSS THINGYMAJIGGS*/
-
-.centerElement_horizontally {
-    display: flex;
-    justify-content: center;
-}
-
-
-

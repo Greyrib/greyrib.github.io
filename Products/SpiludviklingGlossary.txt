@@ -2,14 +2,8 @@ Glossary for Terms til Spiludvikling (Multiplayer)
 --------------------------------------------------
 
 Data marshalling
-- Process of taking an object like a struct and transforming it into a format suitable for storage or transmission
-- One form of serialization
-- Maintains the shape of the data so when de-marshaled, the object can be reconstructed
-- In .NET, is used to share data between .NET managed memory & unmanaged memory of the program
-
-RESTful API
-- REpresentational State Transfer
-- NOTE: REST is a concept; it does not define the API. APIs are different for each service
-- Way for clients to request data using a web URL
-- Request can be given a response in known format from the server
+- process of taking an object like a struct and transforming it into a format suitable for storage or transmission
+- one form of serialization
+- maintains the shape of the data so when de-marshaled, the object can be reconstructed
+- in .NET, is used to share data between .NET managed memory & unmanaged memory of the program
 
