@@ -68,3 +68,23 @@ SOA
 	- Loosely-coupled reusable services
 	- SOAP, REST
 	- Scaleable, flexible & interoperability
+
+---
+
+NGINX
+> See:	nginx.org
+> Replacement for old-style single web-server configured to handle minimal request-amount
+> Can be configured to either handle requests itself or act as proxy, directing to backend servers
+	- If acting as proxy, handles load balancing by algorithm e.g. current fewests or round-robin
+	- If acting as proxy, can use caching to handle repeated similar requests
+	- If acting as proxy, can forward encrypted messages ; backend server handles decryption
+> Can compress data to save bandwidth & improve load times
+> Can permit segmented data transfer (sending in chunks)
+> Defined by nginx.conf with syntax composed of directives & blocks
+
+> In relation to Kubernetes:
+	- Can act as an Ingress Controller (specialized load balancer), handling ingress traffic
+	- Handles routing to services based on IC rules defined
+	- Is an IC within the cluster, so still needs an external load balancer (e.g. AWS' LB)
+
+> Similar to Apache, but more light-weight & faster, hence better for scaling or handling large data amounts
