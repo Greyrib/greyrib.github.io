@@ -88,3 +88,6 @@ NGINX
 	- Is an IC within the cluster, so still needs an external load balancer (e.g. AWS' LB)
 
 > Similar to Apache, but more light-weight & faster, hence better for scaling or handling large data amounts
+
+---
+
