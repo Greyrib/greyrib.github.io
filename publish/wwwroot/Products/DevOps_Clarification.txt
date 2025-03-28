@@ -89,5 +89,15 @@ NGINX
 
 > Similar to Apache, but more light-weight & faster, hence better for scaling or handling large data amounts
 
+> "Server" & serving clients
+
+> nginx.conf
+	- directives & contexts ; med 'directives for en given context'
+
+> 'Reverse Proxy'
+
+> 'Location Block'
+
+
 ---
 

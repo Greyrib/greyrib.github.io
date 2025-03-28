@@ -1,0 +1,134 @@
+def gv // Globally available
+
+CODE_CHANGES = getGitChanges() // Make this groovy script
+
+pipeline {	// Required top-level for declarative
+	
+	// Declarative ; simpler pre-defined structure
+
+	agent any	// Where to execute
+	// Define custom env variables for usage, if we need them
+	environment {
+		NEW_VERSION = 'x.y.z' // Would probably calculate this every time, with a function
+		SERVER_CREDENTIALS = credentials('ID_for_JenkinsCred_goes_here')
+	}
+	// Define build tools for our projects ; Jenkins supports maven, gradle & jdk | Otherwise, configure others
+	tools {
+		
+	}
+
+	parameters {
+		string(name: 'VERSION', defaultValue: '', description: 'version to deploy on prod')
+		choice(name: 'VERSION', choices: ['1.1.0', '1.2.0'], description: '')
+		booleanParam(name: 'executeTests', defaultValue: true, description: '')
+	}
+
+	stages {
+	
+		stage("init") {
+			steps {
+				script {
+					gv = load "script.groovy"
+				}
+			}
+		}
+
+		stage("build") {
+			when {
+				expression {
+					CODE_CHANGES == true
+				}
+			}
+			steps {
+				echo 'building the app'
+				echo "building version ${NEW_VERSION}" // If we need the variable interpreted as a variable in a string, REQUIRES DOUBLE QUOTES (versus single quotes)
+
+				script {
+					gv.buildApp()
+				}
+
+
+				// Groovy
+				script {
+					//def var =
+					
+				}
+			}
+		}
+
+		stage("test") {
+			when {
+				expression {
+					// Boolean expression for when this stage will execute
+					BRANCH_NAME == 'main' || BRANCH_NAME == 'dev'
+
+					params.executeTests == true
+
+					// This also works
+					params.executeTests
+				}
+			}
+			steps {
+				echo 'commencing tests'
+			}
+		}
+
+		stage("P Test 1") {
+			echo 'Now in P Test 1 - stage'
+
+		}
+
+		stage("deploy") {
+			steps {
+				// NOTE Requires Credentials & Credentials Binding plugins in Jenkins
+				//sh "${SERVER_CREDENTIALS}" // Shell script usage
+
+				// Alternative way
+				withCredentials ([
+					usernamePassword(credentials: 'ID_on_JenkinsCreds', usernameVariable: USER, passwordVariable: PWD) // Store into these variables for later usage
+				]) {
+					sh "some_script_name ${USER} ${PWD}"
+				}
+				// -----------------------------------------------------------------
+
+
+
+				echo 'deploying the app'
+				echo 'deploying version ${params.VERSION}'
+			}
+		}
+
+		stage("post") {
+			steps {
+				
+			}
+		}
+
+		stage("cleanup") {
+			steps {
+				
+			}
+		}
+
+	}
+
+	post {
+		// After all stages are done
+
+		// Occurs always, regardless of build end status
+		always {
+			
+		}
+		success {
+			// TODO Notify about success
+
+		}
+		failure {
+			// TODO Notify about failure
+
+		}
+	}
+
+
+
+}
