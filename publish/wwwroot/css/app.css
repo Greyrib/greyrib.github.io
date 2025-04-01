@@ -111,4 +111,14 @@ code {
 }
 
 
+.onhoverScaleup_frontpagelogos {
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
 
+.onhoverScaleup_frontpagelogos:hover {
+    /* background-color: rgba(255,255,255,0.37);
+    color: white; */
+
+    transform: scale(1.1);
+    filter: brightness(1.5);
+}
