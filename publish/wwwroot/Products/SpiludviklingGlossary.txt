@@ -32,3 +32,8 @@ Bandwidth
 Latency
 - Roundtrip delay i.e. "time it takes the data packet to travel from the source to the destination and come back"
 - Can impact network performance when data is sent by TCP/IP because of ACKs before sending other data
+
+RTT
+- Round-Trip Time
+- Time it takes a packet to go from A to B, and back to A again
+
