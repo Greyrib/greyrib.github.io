@@ -37,3 +37,8 @@ RTT
 - Round-Trip Time
 - Time it takes a packet to go from A to B, and back to A again
 
+RPC
+- Remote Procedure Call
+- 'Utilized by network communication interfaces to share info from client to server and vice versa'
+- E.g. player shoots, sends ServerRPC so authoritative server can shoot for player & server can then ClientRPC with data back to client, and associated params
+
