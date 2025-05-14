@@ -1,0 +1,153 @@
+﻿@page "/productpages_devopsclarification"
+
+@* Background Imageryie *@
+<div style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: url('your-image.jpg') no-repeat center center fixed; background-size: cover; opacity: 0.25; z-index: -1;">
+	<img src="img/StaticGray.jpg"/>
+</div>
+
+<PageTitle>DevOps Clarification - Razor Page Variant</PageTitle>
+<NavLink href="/products" class="nav-link">&lt;&lt; Tilbage til Produkter</NavLink>
+<h3>DevOps Clarification - Razor Page Variant</h3>
+<hr style="border: none; border-top: 5px solid black; background-color: black;">
+
+
+
+Vigtigt princip: Rapid reliable delivery (via automatisering)
+
+
+* Ifölge Microsoft Azure's site *
+4 nögle-faser i DevOps:
+
+	Plan – Requirements, arkitektur & udviklingsstrategi; koordinering af teams, backlog management og CI/CD planlægning.
+
+	Develop – Skriv kode, review & test. CI-del: Auto-merged ved push up & automatiske tests
+
+	Release – CD-del: Automatisk building, deployment & "infrastructure provisioning" *.
+
+	Operate – Monitoring, sikkerhed & performance optimering. Logging, alerting & incident-response. Keyword: Reliability
+
+---
+
+Phase-Specific Software Parts:
+
+>>> Plan
+
+>>> Code
+- git (Version Control)
+
+>>> Build
+- gradle
+- Maven
+
+>>> Test
+- Selenium
+
+>>> Deploy
+
+
+>>> Operate
+- Docker
+- Kubernetes ; orchestration tool
+- Ansible
+
+>>> Monitor
+- Nagios
+
+>>> Integrate
+- Jenkins
+
+Orchestration Platform concerns:
+	- Deploy
+	- Scaling ; manage scaling to ensure ideal compute resource usage
+	- Network ; communication between multiple service-parts (e.g. 2 front end, 3 back end, 1 database)
+	- Insight ; service mesh* overview
+
+Service Mesh
+- 2 komponenter:
+	- data plane
+		- Lightweight sidecar proxies (e.g. Envoy), manage network traffic mellem microservices
+	- control plane
+		- Konfigurering, policies & telemetry indsamling
+- Why use ?
+	- Håndtérer (micro)service discovery & routing
+	- 'Observability' (tracing, monitoring, logging)
+	- Authentication, authorization
+	- Resiliency (auto-retries, circuit breaking, failover)
+
+SOA
+	- Service-Oriented Architecture
+	- Loosely-coupled reusable services
+	- SOAP, REST
+	- Scaleable, flexible & interoperability
+
+---
+
+NGINX
+> See:	nginx.org
+> Replacement for old-style single web-server configured to handle minimal request-amount
+> Can be configured to either handle requests itself or act as proxy, directing to backend servers
+	- If acting as proxy, handles load balancing by algorithm e.g. current fewests or round-robin
+	- If acting as proxy, can use caching to handle repeated similar requests
+	- If acting as proxy, can forward encrypted messages ; backend server handles decryption
+> Can compress data to save bandwidth & improve load times
+> Can permit segmented data transfer (sending in chunks)
+> Defined by nginx.conf with syntax composed of directives & blocks
+
+> In relation to Kubernetes:
+	- Can act as an Ingress Controller (specialized load balancer), handling ingress traffic
+	- Handles routing to services based on IC rules defined
+	- Is an IC within the cluster, so still needs an external load balancer (e.g. AWS' LB)
+
+> Similar to Apache, but more light-weight & faster, hence better for scaling or handling large data amounts
+
+> "Server" & serving clients
+
+> nginx.conf
+	- directives & contexts ; med 'directives for en given context'
+
+> 'Reverse Proxy'
+
+> 'Location Block'
+
+
+<h4>Slack</h4>
+<ul>
+	<li>'Searchable Log of All Conversation & Knowledge'</li>
+</ul>
+<table>
+	<tr>
+		<td>
+			<a href="/Screenshots_Week20/0512_2_SlackTest_SlackBrowser.png" target="_blank"><img src="/Screenshots_Week20/0512_2_SlackTest_SlackBrowser.png" class="imageClampedSmall imageBorder" /></a>
+			<br /><i></i>
+		</td>
+		<td>
+			<a href="/Screenshots_Week20/0514_SlackNotifications_PipelineCommand.png" target="_blank"><img src="/Screenshots_Week20/0514_SlackNotifications_PipelineCommand.png" class="imageClampedSmall imageBorder" /></a>
+			<br /><i></i>
+		</td>
+		<td>
+			<a href="/Screenshots_Week20/0514_SlackNotifications_ManageTestConfig.png" target="_blank"><img src="/Screenshots_Week20/0514_SlackNotifications_ManageTestConfig.png" class="imageClampedSmall imageBorder" /></a>
+			<br /><i></i>
+		</td>
+	</tr>
+</table>
+
+
+<style>
+	.imageClamped {
+		max-width: 800px;
+		max-height: 800px;
+	}
+
+	.imageClampedSmall {
+		max-width: 400px;
+		max-height: 400px;
+	}
+
+	.imageBorder {
+		border: 1px solid black;
+	}
+</style>
+
+@code {
+
+}

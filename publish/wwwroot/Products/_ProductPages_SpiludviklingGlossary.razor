@@ -1,0 +1,61 @@
+﻿@page "/productpages_spiludviklingglossary"
+
+@* Background Imageryie *@
+<div style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: url('your-image.jpg') no-repeat center center fixed; background-size: cover; opacity: 0.25; z-index: -1;">
+	<img src="img/StaticGray.jpg"/>
+</div>
+
+<PageTitle>DevOps Clarification - Razor Page Variant</PageTitle>
+<NavLink href="/products" class="nav-link">&lt;&lt; Tilbage til Produkter</NavLink>
+<h3>DevOps Clarification - Razor Page Variant</h3>
+<hr style="border: none; border-top: 5px solid black; background-color: black;">
+
+<pre>
+Glossary for Terms til Spiludvikling (Multiplayer)
+--------------------------------------------------
+
+Data marshalling
+- Process of taking an object like a struct and transforming it into a format suitable for storage or transmission
+- One form of serialization
+- Maintains the shape of the data so when de-marshaled, the object can be reconstructed
+- In .NET, is used to share data between .NET managed memory & unmanaged memory of the program
+
+RESTful API
+- REpresentational State Transfer
+- NOTE: REST is a concept; it does not define the API. APIs are different for each service
+- Way for clients to request data using a web URL
+- Request can be given a response in known format from the server
+
+
+Bandwidth
+- [UNF Chapter 5 p. 200] Maximum amount of data that can pass through a network at a given time
+- Measured in Bits per second (NOT bytes) [Mbps vs MBPS - first is bits, latter is bytes] [8 bit = 1 byte]
+- A.K.A. "Volume of data moving at any instant in time"
+- "Very high for backbone systems of the Internet"
+	+ "India's TIER-1 provider has more than 20+Tbps bandwidth available. ... You commonly don't get slow data if you have more bandwidth available with your ISP"
+- Higher bandwidth = higher cost for consume (paid to ISP)
+- "...High bandwidth is required when multiple devices are connected to the Internet simultaneously."
+
+- 2 Types:
+	- Symmetrical : Upload & download rate is same, common on wired connections like fiber optics
+	- Asymmetrical : Different upload & download rates, common in wireless connections, e.g. mobile data & satellite Internet
+
+
+
+Latency
+- Roundtrip delay i.e. "time it takes the data packet to travel from the source to the destination and come back"
+- Can impact network performance when data is sent by TCP/IP because of ACKs before sending other data
+
+RTT
+- Round-Trip Time
+- Time it takes a packet to go from A to B, and back to A again
+
+RPC
+- Remote Procedure Call
+- 'Utilized by network communication interfaces to share info from client to server and vice versa'
+- E.g. player shoots, sends ServerRPC so authoritative server can shoot for player & server can then ClientRPC with data back to client, and associated params
+</pre>
+
+@code {
+
+}

@@ -1,0 +1,51 @@
+﻿@page "/pp_tododevops"
+
+@* Background Imageryie *@
+<div style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: url('your-image.jpg') no-repeat center center fixed; background-size: cover; opacity: 0.25; z-index: -1;">
+	<img src="img/StaticGray.jpg"/>
+</div>
+
+<PageTitle>TODO DevOps Pipeline Setup - Razor Page Variant</PageTitle>
+<NavLink href="/products" class="nav-link">&lt;&lt; Tilbage til Produkter</NavLink>
+<h3>TODO DevOps Pipeline Setup - Razor Page Variant</h3>
+<hr style="border: none; border-top: 5px solid black; background-color: black;">
+
+<h4>Sæt din very own pipeline op med Jenkins, ved at gøre følgende:</h4>
+
+<ul>
+	<li>Hent latest Jenkins-image fra Docker Hub</li>
+	<li>Start en ny container, based på said Jenkins-image</li>
+	<li>Gennemgå setup proces (plugins, Admin password & account setup)</li>
+	<li>Jenkins er now running, og stoppable & startable via e.g. Docker Desktop eller CLI</li>
+	<li>Åben Jenkins via tilhørende port for running container (i Docker), i din browser</li>
+	<li>Konfigurér Jenkins, plugins samt opsæt diverse pipelines, e.g. scripted eller freestyle</li>
+</ul>
+
+
+<h4>Opsætning af Pipeline i Jenkins & sammenkobling med Git Repository</h4>
+
+<ul>
+	<li>Opret 'New Item' (TILRET ???) i Jenkins, e.g. en scripted pipeline</li>
+	<li>Peg på det givne git repository i pipelinen, e.g. som picturized på billede X herunder for en scripted pipeline</li>
+	<li>---Polling (how, what & why ???)---</li>
+</ul>
+
+<style>
+	.imageClamped {
+		max-width: 800px;
+		max-height: 800px;
+	}
+
+	.imageClampedSmall {
+		max-width: 400px;
+		max-height: 400px;
+	}
+
+	.imageBorder {
+		border: 1px solid black;
+	}
+</style>
+
+@code {
+
+}
