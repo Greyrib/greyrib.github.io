@@ -21,13 +21,72 @@
 	<li>Konfigurér Jenkins, plugins samt opsæt diverse pipelines, e.g. scripted eller freestyle</li>
 </ul>
 
+<br />
+<br />
 
-<h4>Opsætning af Pipeline i Jenkins & sammenkobling med Git Repository</h4>
+<h4>Addendum : Sammenkobling med Github Repository</h4>
 
 <ul>
-	<li>Opret 'New Item' (TILRET ???) i Jenkins, e.g. en scripted pipeline</li>
-	<li>Peg på det givne git repository i pipelinen, e.g. som picturized på billede X herunder for en scripted pipeline</li>
-	<li>---Polling (how, what & why ???)---</li>
+	@* <li>Opret 'New Item' i Jenkins, e.g. en scripted, freestyle eller anden type pipeline</li> *@
+	<b>Freestyle Pipeline</b>
+	<li>Under 'Git' i 'Configuration' for pipelinen, ensure at have tilføjet følgende:</li>
+	<ul>
+		<li>Repository Url - Fra browser eller 'Clone Repo' HTML link på repo's forside</li>
+		<li>Credentials - Som tilføjet til Jenkins, overensstemmende med en github profil som har adgang til repo'et [NOTE: Ikke verified dette gennem testing, da jeg brugte public repos som possibly ikke require credentials for access]</li>
+		<li>Branch Specifier - Ideally sat til 'main' eller whatever branch fra repo som man vil benytte ; kan optionally leaves blank for at Jenkins puller 'any' branch [NOTE: Også untested]</li>
+	</ul>
+	<br />
+	<a href="/Screenshots_Week20/0516_26_TODO_LinkPipelineToGitRepo.png" target="_blank"><img src="/Screenshots_Week20/0516_26_TODO_LinkPipelineToGitRepo.png" class="imageClampedSmall imageBorder" /></a>
+	<br />
+	<br />
+	<b>Scripted Pipeline</b>
+	<li>Under 'Git' i 'Configuration' for pipelinen, ensure at have tilføjet følgende:</li>
+	<ul>
+		<li>Repository Url - Fra brower eller 'Clone Repo' HTML link på repo's forside'</li>
+		<li>Credentials - Som tilføjet til Jenkins, overensstemmende med en github profil som har adgang til repo'et [NOTE: Ikke verified dette gennem testing, da jeg brugte public repos som possibly ikke require credentials for access]</li>
+		<li>Branch Specifier - Ideally sat til 'main' eller whatever branch fra repo som man vil benytte ; kan optionally leaves blank for at Jenkins puller 'any' branch [NOTE: Også untested]</li>
+		<li>Script Path - Sat til den path hvor i repoet den givne Jenkinsfile der skal benyttes, befinder sig (det vil også sige, man kan have flere Jenkinsfiles liggende rundt omkring, og sandsynligvis også tilrette undervejs i pipelinen's run, hvilken den peger på</li>
+	</ul>
+	<li>Jenkinsfile - Til stede på repo, wherever der matcher med den specified path til den Jenkinsfile som skal bruges i pipelinen's Configuration'</li>
+	<ul>
+		<li>At Jenkinsfilen's content er overensstemmende med Jenkins' expectations ; E.g. hverken post-stage med blanke post-dele (success, failure, always) OG EJ HELLER' en tom post-stage del (Muligvis andre requirements, check evt. documentation)</li>
+	</ul>
+	<br />
+	<table>
+		<tr>
+			<td>
+				<a href="/Screenshots_Week20/0516_28_TODO_SCMLinkInScripted_Config.png" target="_blank"><img src="/Screenshots_Week20/0516_28_TODO_SCMLinkInScripted_Config.png" class="imageClampedSmall imageBorder" /></a>
+				<br /><i></i>
+			</td>
+			<td>
+				<a href="/Screenshots_Week20/0516_LinkedTilGitRepo_Scripted2_04_TODO_JenkinsfilePresentInRepo.png" target="_blank"><img src="/Screenshots_Week20/0516_LinkedTilGitRepo_Scripted2_04_TODO_JenkinsfilePresentInRepo.png" class="imageClampedSmall imageBorder" /></a>
+				<br /><i></i>
+			</td>
+			<td>
+				<a href="/Screenshots_Week20/0516_LinkedTilGitRepo_Scripted2_05_TODO_AccurateJenkinsFile.png" target="_blank"><img src="/Screenshots_Week20/0516_LinkedTilGitRepo_Scripted2_05_TODO_AccurateJenkinsFile.png" class="imageClampedSmall imageBorder" /></a>
+				<br /><i></i>
+			</td>
+		</tr>
+	</table>
+</ul>
+
+<br />
+<br />
+
+<h4>Addendum : Automatisk polling & building - Freestyle Pipeline</h4>
+
+<ul>
+	<li>Ving 'Build periodically' af, under 'Triggers' i 'Configuration' af freestyle pipelinen</li>
+	<li>Ensure 'Schedule' er udfyldt korrekt (Se evt. '?' helper tooltip med eksempler)</li>
+	<br />
+	<table>
+		<tr>
+			<td>
+				<a href="/Screenshots_Week20/0516_LinkedTilGitRepo_Scripted2_06_TODO_BuildPeriodically.png" target="_blank"><img src="/Screenshots_Week20/0516_LinkedTilGitRepo_Scripted2_06_TODO_BuildPeriodically.png" class="imageClampedSmall imageBorder" /></a>
+				<br /><i></i>
+			</td>
+		</tr>
+	</table>
 </ul>
 
 <style>
