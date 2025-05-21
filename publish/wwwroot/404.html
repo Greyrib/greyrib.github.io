@@ -1,13 +1,14 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=./index.html">
     <script>
-        // Redirect to index.html and preserve full path and query
-        var currentPath = location.pathname + location.search + location.hash;
-        var newUrl = "/index.html?redirect=" + encodeURIComponent(currentPath);
+        // GitHub Pages 404 fallback: redirect to index.html and preserve the full path
+        var pathname = window.location.pathname;
+        var search = window.location.search || '';
+        var hash = window.location.hash || '';
+        var newUrl = '/index.html' + '?path=' + encodeURIComponent(pathname + search + hash);
         window.location.replace(newUrl);
     </script>
 </head>
@@ -15,6 +16,7 @@
     <p>Redirecting...</p>
 </body>
 </html>
+
 
 
 
