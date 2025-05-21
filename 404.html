@@ -1,14 +1,25 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; url=./index.html" />
+    <meta charset="UTF-8" />
     <title>Redirecting...</title>
+    <script>
+        const pathname = window.location.pathname;
+        const search = window.location.search;
+        const hash = window.location.hash;
+        const target = "/index.html";
+
+        // This tricks Blazor into thinking it's still on the right page
+        history.replaceState(null, "", pathname + search + hash);
+        window.location.replace(target);
+    </script>
 </head>
 <body>
     <p>Redirecting...</p>
 </body>
 </html>
+
+
 
 
 
@@ -35,12 +46,6 @@
     <p>Redirecting...</p>
 </body>
 </html>-->
-
-
-
-
-
-
 <!--<!DOCTYPE html>
 <html lang="en">
 <head>
