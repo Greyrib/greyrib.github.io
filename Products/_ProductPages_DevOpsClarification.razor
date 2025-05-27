@@ -114,7 +114,7 @@ NGINX
 <ul>
 	<li>'Searchable Log of All Conversation & Knowledge'</li>
 </ul>
-<table>
+<table style="marginTop15 marginBot15">
 	<tr>
 		<td>
 			<a href="/Screenshots_Week20/0512_2_SlackTest_SlackBrowser.png" target="_blank"><img src="/Screenshots_Week20/0512_2_SlackTest_SlackBrowser.png" class="imageClampedSmall imageBorder" /></a>
@@ -132,7 +132,47 @@ NGINX
 </table>
 
 
+<h4>Jenkins Pipelines</h4>
+<table style="marginTop15 marginBot15">
+	<tr>
+		<td>
+			<ul>
+				<li>Initial Analysering</li>
+				- App type ; web app, microservice, monolith
+				- Language & frameworks
+				- Source code hosted hvor ?
+				<br />
+				- Build tools ; Gradle, npm, Docker
+				- Håndtering af Testing ; unit, integration, test-tools som JUnit, PyTest ?
+				- Stages ; Linting, code coverage, sikkerheds-scanning
+				<br />
+				- Deployment ; Cloud, container eller on-premise (physical)
+				- IaC elementer
+
+				<li>Efterfølgende Evaluering</li>
+				- Simpel freestyle setup vs. fleksibilitet i scripted
+				- Multi-branch ift. feature-branching
+				- Multiple SCMs vs singular
+				<br />
+				- Multiple stages / expanding / varying
+				- Integration med eksterne services
+				<br />
+				- Pipeline-as-Code
+				- Potentielt delte libraries
+			</ul>
+		</td>
+	</tr>
+</table>
+
 <style>
+	.marginTop15 {
+		margin-top: 15px;
+	}
+
+	.marginBot15 {
+		margin-bottom: 15px;
+	}
+
 	.imageClamped {
 		max-width: 800px;
 		max-height: 800px;
