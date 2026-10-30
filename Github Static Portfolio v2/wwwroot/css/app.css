@@ -119,3 +119,20 @@ code {
 .icon-grid img {
     
 }
+
+.screenshots-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.screenshots-grid figure {
+    margin: 10px;
+    text-align: center;
+}
+
+.screenshots-grid figcaption {
+    font-size: 0.85em;
+    /*color: #666;*/
+    margin-top: 6px;
+    font-style: italic;
+}
